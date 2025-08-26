@@ -10,4 +10,4 @@ Seperatör koydum.
 Terminal ekranını program önce bir kontrol ediyor. 
 
 -sorunlar 
-farklı renklerde ortalama konusu bir karakter kayma olabiliyor. 
+farklı renklerde ortalama konusu bir karakter kayma olabiliyor. OpenAI, Gemini vs vs hepsine sordum yardımcı olmak bir yana konuyu anlamadılar.
