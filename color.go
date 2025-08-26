@@ -582,7 +582,6 @@ func stage1() {
 
 // stage0 is the initial welcome message.
 func stage0() {
-	fmt.Println(ColorCyan + "PORTED BY GEMINI" + ColorReset)
 	fmt.Println(ColorCyan + "merhaba" + ColorReset)
 	fmt.Println(ColorCyan + "ben karabasan..." + ColorReset)
 	stage1()
