@@ -573,7 +573,6 @@ func stage1() {
 
 // stage0 is the initial welcome message.
 func stage0() {
-	fmt.Println("PORTED BY GEMINI")
 	fmt.Println("merhaba")
 	fmt.Println("ben karabasan...")
 	stage1()
