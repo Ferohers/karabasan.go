@@ -1,7 +1,8 @@
 {
   "greetings": [
-    "merhaba",
-    "ben Karabasan..."
+    "Merhaba, hoş geldin.",
+    "Ben Karabasan.exe'nin Go versiyonuyum.",
+    "Tanıştığıma memnun oldum. Hadi başlayalım."
   ],
   "jokes": [
     "adamın biri soğuk çay istemiş...\nçaycı çayı getirmiş...\nadam da 'ISIT DA İÇELİM KARDEŞİM!' demiş!",
@@ -31,15 +32,17 @@
   ],
   "stages": {
     "stage1": {
-      "namePrompt": "senin adın ne güzelim\n? ",
+      "namePrompt": "senin adın ne güzelim?",
       "responses": {
+        "intro": "Tanıştığıma memnun oldum, %s. Hadi başlayalım.",
         "shortName": "Uzak doğudan mısın yoksa başka bir gezegenden mi?\n %d\n harfli ismini biraz zor telafuz ediyorum da...\n%c...\n%ch%s!!!\neee.. olmadı galiba... hehehehehee!\n",
-        "longName": "maaşşallaaaah!\nnüfus memuru ananı babanı pek sevmiyormuş galiba!!!",
-        "intro": "%s..."
+        "longName": "maaşşallaaaah!\nnüfus memuru ananı babanı pek sevmiyormuş galiba!!!"
       }
     },
     "stage2": {
-      "agePrompt": "kaç yaşındasın?\n? ",
+      "agePrompt": "kaç yaşındasın?",
+      "ageResponse": "Öyle mi, %d yaşındasın demek?",
+      "invalidInput": "Geçersiz giriş. Lütfen bir sayı girin.",
       "ageRanges": [
         { "min": 0, "max": 4, "text": "çok küçükmüşsün be! sen git anan gelsin lan lavuk!" },
         { "min": 5, "max": 9, "text": "sütünü içtin mi yavrum?\n(e/h)? ", "yes": "Beynine pek etkisi olmamış, git biraz da PEPSı iç!", "no": "bok iç o zaman!" },
@@ -52,7 +55,9 @@
       ]
     },
     "stage3": {
-      "heightPrompt": "boyun kaç cm senin?\n? ",
+      "heightPrompt": "boyun kaç cm senin?",
+      "heightResponse": "%d cm boyun var demek? Hmm...",
+      "invalidInput": "Geçersiz giriş. Lütfen bir sayı girin.",
       "heightRanges": [
         { "min": 0, "max": 99, "text": "Deden pigmelerin hangi kavminden lan?" },
         { "min": 100, "max": 149, "text": "Kısa boylu olman önemli diil, diyeceğimi sanıyorsan yanılıyorsun pis cüce!" },
@@ -63,12 +68,14 @@
       ]
     },
     "stage4": {
-      "weightPrompt": "oldu olcak kilonu da söyle bari... çok umurumda ya...\n? ",
+      "weightPrompt": "oldu olcak kilonu da söyle bari... çok umurumda ya?",
+      "weightResponse": "%d kilon var demek? Bakalım...",
+      "invalidInput": "Geçersiz giriş. Lütfen bir sayı girin.",
       "weightRanges": [
         { "min": 0, "max": 39, "text": "Rüzgarlı havada dışarı falan çıkma hehehe!" },
         { "min": 40, "max": 59, "text": "o kadar yemiş yersen ishal de olursun, kabız da!" },
         { "min": 60, "max": 79, "text": "sen normalsin o yüzden dalga geçmiicem... noormaal! noormaal! hehehe!!" },
-        { "min": 80, "max": 99, "text": "Maaşşallaaah! damızlıkmısın? hangi çiftlikte yetiştin? keh!keh!keh!!.", "variants": ["Lütfen, oturduğun koltuk sağlam kalsın!", "Maaşşallaaah! damızlıkmısın? hangi çiftlikte yetiştin? keh!keh!keh!!.", "Duba! dikkat et benim üstüme düşme!"] },
+        { "min": 80, "max": 99, "variants": ["Lütfen, oturduğun koltuk sağlam kalsın!", "Maaşşallaaah! damızlıkmısın? hangi çiftlikte yetiştin? keh!keh!keh!!.", "Duba! dikkat et benim üstüme düşme!"] },
         { "min": 100, "max": 999, "text": "Anlamıştım... 2 saattir klavyenin anasını ağlattın" }
       ]
     },
@@ -76,14 +83,17 @@
       "prompts": [
         { "text": "%s!\nsana gözlerinin çok güzel olduğunu söyleyen olmuşmuydu hiç\n(e/h)? ", "yes": "yalan söylemiş!", "no": "doğrudur. çünkü gözlerin güzel diil!" },
         { "text": "\nyavrum\n%s\nayda 50 milyon kazanmak istermisin?\n(e/h)? ", "yes": "o zaman Ay'a gitmen lazım...", "no": "iyi... zaten Ay'da sağlıklı çalışabileceğini sanmıyordum." },
-        { "text": "\n%s\nadı nerden geliyo?\n? ", "response": "üüüü! baya uzaktan geliyomuş!" },
-        { "text": "\n%s\nbi sayı tut.\ntuttunmu (e/h)\n? ", "yes": "şimdi de bırak!", "no": "bi sayıyı tutamadın allah belanı versin" },
-        { "text": "\nnasılsınız lan\n%s?\niyimisin ki (e/h)\n? ", "yes": ["niye iyisin? oturduğun yere bir bak bakiim...\njoysitick falan unutmuş olmasınlar?", "iyi iyi... sen iyi olmaya devam et\n%s!\nuyu da büyü!\n", "böyle bir hayatta nasıl iyi oluyorsunuz ki lan\n%s?\nbize de söyle yolunu biz de iyi olalım.."], "no": ["bana ne lan! geber!", "iyi iyi allah kötülük versin! he he he !!", "derdini anlat bana! açıl bana yavrucuum! utanma ben doktorum...\nKötü olmana sebep olan şey nedir %s", "\n??\nhahahahahahahaha!!! git allasen yaw! dert  ettiğin şeye bak!"] },
-        { "text": "\nneyse... %s\n      öğrencimisin?\n? ", "yes": ["wah! wah! wah! çok üzüldüm.. ailenin haberi varmı? ha!haha!!hohoho!!!\n", "nerde öğrencisin? okulda mı?? hihohohohhohohooo!!!\nespri konuşlandırdım!!\n"], "no": ["ulan insan en azından askerden yırtmak için öğrenci olur! Ama sen, tıss!", "hangi işle meşgulsun o vakit?\n? ", "siktir lan göt! cümle alem senin ne mal olduğunu biliyor.\n"] }
+        { "text": "\n%s\nadı nerden geliyo?", "response": "üüüü! baya uzaktan geliyomuş!" },
+        { "text": "\n%s\nbi sayı tut.\ntuttunmu (e/h)?", "yes": "şimdi de bırak!", "no": "bi sayıyı tutamadın allah belanı versin" },
+        { "text": "\nnasılsınız lan\n%s?\niyimisin ki (e/h)? ", "yes": ["niye iyisin? oturduğun yere bir bak bakiim...\njoysitick falan unutmuş olmasınlar?", "iyi iyi... sen iyi olmaya devam et\n%s!\nuyu da büyü!\n", "böyle bir hayatta nasıl iyi oluyorsunuz ki lan\n%s?\nbize de söyle yolunu biz de iyi olalım..\n"], "no": ["bana ne lan! geber!", "iyi iyi allah kötülük versin! he he he !!", "derdini anlat bana! açıl bana yavrucuum! utanma ben doktorum...\nKötü olmana sebep olan şey nedir %s", "\n??\nhahahahahahahaha!!! git allasen yaw! dert  ettiğin şeye bak!"] },
+        { "text": "\nneyse... %s\n      öğrencimisin? ", "yes": ["wah! wah! wah! çok üzüldüm.. ailenin haberi varmı? ha!haha!!hohoho!!!\n", "nerde öğrencisin? okulda mı?? hihohohohhohohooo!!!\nespri konuşlandırdım!!\n"], "no": ["ulan insan en azından askerden yırtmak için öğrenci olur! Ama sen, tıss!", "hangi işle meşgulsun o vakit? ", "siktir lan göt! cümle alem senin ne mal olduğunu biliyor.\n"] }
       ]
     },
+    "stage6": {
+      "jokeIntro": "bak sana şindi konuyla ilgili bir fıkra..."
+    },
     "stage7": {
-      "hometownPrompt": "memleket nere %s?\n? ",
+      "hometownPrompt": "memleket nere %s?",
       "vowelResponses": {
         "u o": "madem %slusun,\n buralara ne b*k yemeye geldin?! Ayrıca\n%sdan\n   adam falan çıkmaz!\n",
         "ü ö": "heheheh!%sden\n top çıkarmış diyolar!?!",
@@ -119,7 +129,6 @@
       "responses": {
         "win": " %d  tahminde bildim...\n",
         "cheating": "lanet olsun! beni geçtin! %100 hile yapmışsındır!",
-        "win": "kodum! kodum! kodum! hehehehe!",
         "equal": "hmm... eşitiz galiba..."
       }
     },
@@ -129,4 +138,3 @@
     }
   }
 }
-
